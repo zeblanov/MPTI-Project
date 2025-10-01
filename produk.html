@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="id">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Produk - Forest Dessert</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <img src="assets/img/logo.jpg" alt="logo" class="logo">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="produk.html" class="active">Produk</a></li>
+      <li><a href="edukasi.html">Edukasi Gizi</a></li>
+      <li><a href="pemesanan.html">Pemesanan</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+  </header>
+  <main>
+    <section class="container">
+      <h2 class="section-title">Menu Lengkap</h2>
+      <p style="color:#5a4a4a">Klik "Detail" untuk melihat nutrisi & tombol Order untuk pemesanan cepat.</p>
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+  </main>
+  <footer>&copy; 2025 Forest Dessert — Health Companion</footer>
+<script src="assets/js/script.js"></script>
+<script>
+if(!window.PRODUCTS){
+  window.PRODUCTS = [
+    {id:1,name:'Choco Forest Cake',image:'assets/img/Choco Forest Cake.jpg',short:'Cokelat lembut + topping sehat',desc:'Choco Forest Cake detail panjang.',nutrition:'Protein 5g · Gula 12g · Karbohidrat 30g',price:'Rp35.000',orderLink:'https://wa.me/6285246232785?text=Pesan+Choco+Forest+Cake'},
+    {id:2,name:'Fruit Delight',image:'assets/img/Fruit Delight.jpg',short:'Campuran buah segar dan yoghurt',desc:'Fruit Delight detail panjang.',nutrition:'Protein 3g · Gula 10g',price:'Rp30.000',orderLink:'https://wa.me/6285246232785?text=Pesan+Fruit+Delight'},
+    {id:3,name:'Matcha Pudding',image:'assets/img/Pudding Matcha.jpg',short:'Matcha lembut kaya antioksidan',desc:'Matcha Pudding detail panjang.',nutrition:'Protein 6g · Gula 8g',price:'Rp32.000',orderLink:'https://wa.me/6285246232785?text=Pesan+Matcha+Pudding'}
+  ];
+}
+</script>
+
+<div id="productModal" class="modal" onclick="closeModal()">
+  <div class="dialog" onclick="event.stopPropagation()">
+    <div class="left"><img id="modalImg" src="" alt="product"></div>
+    <div class="right">
+      <h2 id="modalTitle"></h2>
+      <p id="modalDesc" style="color:#5a4a4a"></p>
+      <p><strong>Nutrition:</strong> <span id="modalNutrition"></span></p>
+      <p style="font-size:1.2rem;color:#267373" id="modalPrice"></p>
+      <div style="display:flex;gap:10px;margin-top:12px">
+        <a id="modalWhatsapp" class="btn" href="#" target="_blank">Order via WhatsApp</a>
+        <a href="pemesanan.html" class="btn secondary">Form Pemesanan</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Popup Pilihan Order -->
+<div id="orderChoiceModal" class="modal" onclick="closeOrderChoice()">
+  <div class="dialog" onclick="event.stopPropagation()">
+    <h3>Pilih Cara Order</h3>
+    <div style="display:flex;gap:10px;margin-top:12px">
+      <a id="orderWhatsapp" class="btn" target="_blank">Tanya via WhatsApp</a>
+      <a id="orderForm" class="btn secondary" target="_blank">Isi Google Form</a>
+    </div>
+  </div>
+</div>
+
+
+</body></html>
