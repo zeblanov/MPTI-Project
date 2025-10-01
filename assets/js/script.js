@@ -32,17 +32,38 @@ function closeModal(){ document.getElementById('productModal').style.display='no
 
 // Chart (nutrisi)
 function renderChart(){
-  const ctx = document.getElementById('nutrisiChart');
-  if(!ctx) return;
-  new Chart(ctx, {
-    type:'bar',
-    data:{
-      labels:['Gula','Protein','Karbohidrat','Vitamin','Mineral'],
-      datasets:[{label:'Kandungan per 100g',data:[12,5,30,10,8]}]
-    },
-    options:{responsive:true, maintainAspectRatio:false}
-  });
+  const ctx = document.getElementById('nutrisiChart');
+  if(!ctx) return;
+  new Chart(ctx, {
+    type:'bar',
+    data:{
+      labels:['Gula','Protein','Karbohidrat','Vitamin','Mineral'],
+      datasets:[{
+        label:'Kandungan per 100g',
+        data:[12,5,30,10,8],
+        // ARRAY WARNA BARU UNTUK SETIAP NUTRISI
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.7)', // Merah untuk Gula
+          'rgba(54, 162, 235, 0.7)', // Biru untuk Protein
+          'rgba(255, 206, 86, 0.7)', // Kuning untuk Karbohidrat
+          'rgba(75, 192, 192, 0.7)', // Hijau-Kebiruan untuk Vitamin
+          'rgba(153, 102, 255, 0.7)' // Ungu untuk Mineral
+        ],
+        // Opsional: Tambahkan border untuk kontras
+        borderColor: [
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, 1)'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options:{responsive:true, maintainAspectRatio:false}
+  });
 }
+
 document.addEventListener('DOMContentLoaded',()=>{
   renderChart();
   // mount products cards
