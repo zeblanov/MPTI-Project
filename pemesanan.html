@@ -1,45 +1,150 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Pemesanan - Forest Dessert</title>
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDJq3R0pG8d9Gg3Jm+d/4sY5nS8O5p24K0T4N5fK1Zt1o/QJd4tE7eK7K+h5Ew==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-  <header class="navbar">
-    <img src="assets/img/logo.jpg" alt="logo" class="logo">
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="produk.html">Produk</a></li>
-      <li><a href="edukasi.html">Edukasi Gizi</a></li>
-      <li><a href="pemesanan.html" class="active">Pemesanan</a></li>
-      <li><a href="kontak.html">Kontak</a></li>
-    </ul>
-  </header>
-  <main>
-    <section class="container">
-      <h2 class="section-title">Pemesanan & Pilihan</h2>
-      <p style="color:#5a4a4a">Kamu bisa memesan lewat form atau langsung via WhatsApp untuk order cepat.</p>
-     <div class="contact-grid" style="margin-top:12px">
-    <div class="card-contact">
-      <h3><i class="fas fa-clipboard-list"></i>Form Pemesanan</h3>
-      <p>Isi detail pesananmu, alamat, dan preferensi di form berikut.</p>
-      <a class="btn" href="https://forms.gle/yourGoogleFormLink" target="_blank">Isi Form Pemesanan</a>
-    </div>
-
-    <div class="card-contact">
-      <h3><i class="fab fa-whatsapp"></i>Order Cepat via WhatsApp</h3>
-      <p>Chat langsung ke admin untuk konfirmasi stok dan pengiriman.</p>
-      <a class="btn" href="https://wa.me/6285246232785" target="_blank">Chat WhatsApp</a>
-    </div>
-
-    <div class="card-contact">
-      <h3><i class="fas fa-shipping-fast"></i>Pickup / Delivery</h3>
-      <p>Kami melayani pickup dan delivery (biaya ongkir tergantung lokasi).</p>
-    </div>
-</div>
-    </section>
-  </main>
-  <footer>&copy; 2025 Forest Dessert — Health Companion</footer>
-<script src="assets/js/script.js"></script>
-</body></html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pemesanan - Forest Dessert</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDJq3R0pG8d9Gg3Jm+d/4sY5nS8O5p24K0T4N5fK1Zt1o/QJd4tE7eK7K+h5Ew=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .container {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 0 24px;
+      }
+      .section-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #267373;
+        margin-bottom: 8px;
+      }
+      .description {
+        color: #5a4a4a;
+        margin-bottom: 18px;
+        font-size: 1rem;
+      }
+      .contact-grid {
+        display: flex;
+        gap: 24px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .card-contact {
+        background: #fafafa;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        padding: 22px 18px;
+        width: 280px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        text-align: center;
+        transition: box-shadow 0.25s ease;
+      }
+      .card-contact:hover {
+        box-shadow: 0 8px 24px rgba(38, 115, 115, 0.3);
+      }
+      .card-contact h3 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #267373;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 6px;
+      }
+      .card-contact p {
+        font-size: 0.935rem;
+        color: #484b55;
+        flex-grow: 1;
+      }
+      .btn {
+        padding: 12px 20px;
+        border-radius: 8px;
+        font-weight: 700;
+        background: #f4d35e;
+        border: none;
+        color: #3b2d2d;
+        text-decoration: none;
+        cursor: pointer;
+        display: inline-block;
+        transition: background 0.3s ease;
+      }
+      .btn:hover {
+        background: #e4c552;
+        color: #267373;
+      }
+      @media (max-width: 720px) {
+        .contact-grid {
+          flex-direction: column;
+          align-items: center;
+        }
+        .card-contact {
+          width: 100%;
+          max-width: 400px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <img src="assets/img/logo.jpg" alt="logo" class="logo" />
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="produk.html">Produk</a></li>
+        <li><a href="edukasi.html">Edukasi Gizi</a></li>
+        <li><a href="pemesanan.html" class="active">Pemesanan</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </header>
+    <main>
+      <section class="container">
+        <h2 class="section-title">Pemesanan & Pilihan</h2>
+        <p class="description">
+          Kamu bisa memesan lewat form atau langsung via WhatsApp untuk order
+          cepat.
+        </p>
+        <div class="contact-grid">
+          <div class="card-contact">
+            <h3><i class="fas fa-clipboard-list"></i> Form Pemesanan</h3>
+            <p>Isi detail pesananmu, alamat, dan preferensi di form berikut.</p>
+            <a
+              class="btn"
+              href="https://forms.gle/yourGoogleFormLink"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Isi Form Pemesanan</a
+            >
+          </div>
+          <div class="card-contact">
+            <h3><i class="fab fa-whatsapp"></i> Order Cepat via WhatsApp</h3>
+            <p>Chat langsung ke admin untuk konfirmasi stok dan pengiriman.</p>
+            <a
+              class="btn"
+              href="https://wa.me/6285246232785"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Chat WhatsApp</a
+            >
+          </div>
+          <div class="card-contact">
+            <h3><i class="fas fa-shipping-fast"></i> Pickup / Delivery</h3>
+            <p>
+              Kami melayani pickup dan delivery (biaya ongkir tergantung
+              lokasi).
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>&copy; 2025 Forest Dessert — Health Companion</footer>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
