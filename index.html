@@ -1,89 +1,212 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Forest Dessert - Health Companion</title>
-<link rel="stylesheet" href="assets/css/style.css">
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
-  <header class="navbar">
-    <img src="assets/img/logo.jpg" alt="logo" class="logo">
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="produk.html">Produk</a></li>
-      <li><a href="edukasi.html">Edukasi Gizi</a></li>
-      <li><a href="pemesanan.html">Pemesanan</a></li>
-      <li><a href="kontak.html">Kontak</a></li>
-    </ul>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Forest Dessert - Health Companion</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      /* Pindahkan style inline About Us ke sini */
+      .about-us {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        background: #fff;
+        padding: 32px;
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(38, 115, 115, 0.07);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <img src="assets/img/logo.jpg" alt="logo" class="logo" />
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="produk.html">Produk</a></li>
+        <li><a href="edukasi.html">Edukasi Gizi</a></li>
+        <li><a href="pemesanan.html">Pemesanan</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </header>
 
-  <main>
-    <section class="hero container">
-      <div class="hero-left">
-        <h1>Forest Dessert</h1>
-        <p>Dessert sehat, bergizi, dan lezat. Lihat menu spesial minggu ini!</p>
-        <div class="hero-cta">
-          <a class="btn" href="produk.html">Lihat Menu</a>
-          <a class="btn secondary" href="pemesanan.html">Pemesanan</a>
+    <main>
+      <!-- Hero Fullscreen Section terpisah dari About Us -->
+      <section class="hero-full-bg">
+        <div class="overlay"></div>
+        <img
+          src="assets/img/showcase.png"
+          alt="Forest Dessert Showcase"
+          class="bg-img"
+        />
+        <div class="hero-center">
+          <img src="assets/img/Forest.png" class="hero-logo" alt="brand logo" />
+          <h1 class="brand-name">Forest Dessert</h1>
+          <h2 class="tagline">Dessert Sehat · Puding · Mochi · Buah Segar</h2>
+          <div class="promo">
+            <span class="main">Pesan Mudah, Kirim Cepat</span>
+            <span class="location">Area Semarang</span>
+          </div>
+
+          <a href="#menu" class="scroll-btn">&#8595;</a>
+        </div>
+      </section>
+
+      <section class="about-us container">
+        <h1
+          style="
+            font-size: 2.5rem;
+            color: #267373;
+            font-weight: 700;
+            margin-bottom: 24px;
+          "
+        >
+          Tentang Forest Dessert Health Companion
+        </h1>
+
+        <section id="about" class="about">
+          <h2>Tentang Forest Dessert</h2>
+          <p style="font-size: 1.15rem; color: #3b2d2d; margin-bottom: 16px">
+            Forest Dessert Health Companion lahir sebagai solusi inovatif untuk
+            memberikan edukasi gizi dan transparansi nutrisi pada produk dessert
+            sehat yang berasal dari bahan alami seperti puding, mochi, buah
+            segar rendah gula, smoothies, dan salad. Kami hadir untuk mendukung
+            gaya hidup sehat yang lezat dan terjangkau.
+          </p>
+          <p style="font-size: 1.15rem; color: #3b2d2d; margin-bottom: 16px">
+            Dengan meningkatnya masalah kesehatan akibat konsumsi gula berlebih,
+            Forest Dessert hadir sebagai penghubung antara konsumen dan Usaha
+            Mikro, Kecil, dan Menengah (UMKM) kuliner sehat, melalui aplikasi
+            digital yang memudahkan akses informasi nutrisi dan pemesanan produk
+            dengan mudah dan cepat.
+          </p>
+          <p style="font-size: 1.15rem; color: #3b2d2d; margin-bottom: 16px">
+            Kami percaya bahwa konsumsi dessert sehat yang bertanggung jawab dan
+            berbasis edukasi adalah langkah kecil yang berarti menuju perubahan
+            besar dalam kualitas hidup masyarakat. Melalui teknologi yang kami
+            kembangkan, kami ingin memberdayakan UMKM dalam mengelola promosi
+            dan pemesanan serta menyebarkan informasi gizi yang akurat kepada
+            pelanggan.
+          </p>
+          <p style="font-size: 1.15rem; color: #3b2d2d; margin-bottom: 20px">
+            Forest Dessert Health Companion bukan sekedar aplikasi, melainkan
+            gerakan kolaborasi antara pelanggan, pelaku usaha, dan pengembang
+            untuk merayakan hidup sehat dengan cara yang menyenangkan dan
+            membumi.
+          </p>
+          <p style="font-weight: 700; color: #267373; font-size: 1.2rem">
+            Mari bergabung bersama kami dalam perjalanan #LangkahKecil menuju
+            hidup sehat dan berkualitas.
+          </p>
+        </section>
+      </section>
+
+      <section class="hero container">
+        <div class="hero-left">
+          <h1>Forest Dessert</h1>
+          <p>
+            Dessert sehat, bergizi, dan lezat. Lihat menu spesial minggu ini!
+          </p>
+          <div class="hero-cta">
+            <a class="btn" href="produk.html">Lihat Menu</a>
+            <a class="btn secondary" href="pemesanan.html">Pemesanan</a>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="hero-slide">
+            <img
+              src="assets/img/poster.png"
+              alt="slide"
+              style="width: 360px; border-radius: 12px"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="container">
+        <h2 class="section-title">Menu Unggulan</h2>
+        <div id="productGrid" class="product-grid"></div>
+      </section>
+
+      <section class="container chart-box" style="margin-top: 28px">
+        <h3 class="section-title">Edukasi Singkat: Kandungan Nutrisi</h3>
+        <div style="height: 300px"><canvas id="nutrisiChart"></canvas></div>
+      </section>
+    </main>
+
+    <footer>
+      &copy; 2025 Forest Dessert — Health Companion · IG @forest_dessert
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+      window.PRODUCTS = [
+        {
+          id: 1,
+          name: "Choco Forest Cake",
+          image: "assets/img/pudingcoklat.png",
+          short: "Cokelat lembut + topping sehat",
+          desc: "Choco Forest Cake detail panjang. Terbuat dari bahan rendah gula dan tepung gandum.",
+          nutrition: "Protein 5g · Gula 12g · Karbohidrat 30g",
+          price: "Rp35.000",
+          orderLink: "https://wa.me/6285246232785?text=Pesan+Choco+Forest+Cake",
+        },
+        {
+          id: 2,
+          name: "Fruit Delight",
+          image: "assets/img/pudingstrawberry.png",
+          short: "Campuran buah segar dan yoghurt",
+          desc: "Fruit Delight terbuat dari buah lokal segar dan yoghurt rendah lemak.",
+          nutrition: "Protein 3g · Gula 10g · Vitamin A & C",
+          price: "Rp30.000",
+          orderLink: "https://wa.me/6285246232785?text=Pesan+Fruit+Delight",
+        },
+        {
+          id: 3,
+          name: "Matcha Pudding",
+          image: "assets/img/pudingalpukat.png",
+          short: "Matcha lembut kaya antioksidan",
+          desc: "Matcha Pudding dengan susu almond dan pemanis alami.",
+          nutrition: "Protein 6g · Gula 8g · Mineral",
+          price: "Rp32.000",
+          orderLink: "https://wa.me/6285246232785?text=Pesan+Matcha+Pudding",
+        },
+      ];
+    </script>
+
+    <!-- Modal -->
+    <div id="productModal" class="modal" onclick="closeModal()">
+      <div class="dialog" onclick="event.stopPropagation()">
+        <div class="left">
+          <img id="modalImg" src="" alt="product" />
+        </div>
+        <div class="right">
+          <h2 id="modalTitle"></h2>
+          <p id="modalDesc" style="color: #5a4a4a"></p>
+          <p><strong>Nutrition:</strong> <span id="modalNutrition"></span></p>
+          <p style="font-size: 1.2rem; color: #267373" id="modalPrice"></p>
+          <div style="display: flex; gap: 10px; margin-top: 12px">
+            <a id="modalWhatsapp" class="btn" href="#" target="_blank"
+              >Order via WhatsApp</a
+            >
+            <a href="pemesanan.html" class="btn secondary">Form Pemesanan</a>
+          </div>
         </div>
       </div>
-      <div class="hero-right">
-        <div class="hero-slide"><img src="assets/img/Choco Forest Cake.jpg" alt="slide" style="width:360px;border-radius:12px"></div>
-      </div>
-    </section>
-
-    <section class="container">
-      <h2 class="section-title">Menu Unggulan</h2>
-      <div id="productGrid" class="product-grid"></div>
-    </section>
-
-    <section class="container chart-box" style="margin-top:28px">
-      <h3 class="section-title">Edukasi Singkat: Kandungan Nutrisi</h3>
-      <div style="height:300px"><canvas id="nutrisiChart"></canvas></div>
-    </section>
-  </main>
-
-  <footer>
-    &copy; 2025 Forest Dessert — Health Companion · IG @forest_dessert
-  </footer>
-
-<script src="assets/js/script.js"></script>
-<script>
-window.PRODUCTS = [
-  {id:1,name:'Choco Forest Cake',image:'assets/img/Choco Forest Cake.jpg',short:'Cokelat lembut + topping sehat',desc:'Choco Forest Cake detail panjang. Terbuat dari bahan rendah gula dan tepung gandum.',nutrition:'Protein 5g · Gula 12g · Karbohidrat 30g',price:'Rp35.000',orderLink:'https://wa.me/6285246232785?text=Pesan+Choco+Forest+Cake'},
-  {id:2,name:'Fruit Delight',image:'assets/img/Fruit Delight.jpg',short:'Campuran buah segar dan yoghurt',desc:'Fruit Delight terbuat dari buah lokal segar dan yoghurt rendah lemak.',nutrition:'Protein 3g · Gula 10g · Vitamin A & C',price:'Rp30.000',orderLink:'https://wa.me/6285246232785?text=Pesan+Fruit+Delight'},
-  {id:3,name:'Matcha Pudding',image:'assets/img/Pudding Matcha.jpg',short:'Matcha lembut kaya antioksidan',desc:'Matcha Pudding dengan susu almond dan pemanis alami.',nutrition:'Protein 6g · Gula 8g · Mineral',price:'Rp32.000',orderLink:'https://wa.me/6285246232785?text=Pesan+Matcha+Pudding'}
-];
-</script>
-
-<!-- Modal -->
-<div id="productModal" class="modal" onclick="closeModal()">
-  <div class="dialog" onclick="event.stopPropagation()">
-    <div class="left">
-      <img id="modalImg" src="" alt="product">
     </div>
-    <div class="right">
-      <h2 id="modalTitle"></h2>
-      <p id="modalDesc" style="color:#5a4a4a"></p>
-      <p><strong>Nutrition:</strong> <span id="modalNutrition"></span></p>
-      <p style="font-size:1.2rem;color:#267373" id="modalPrice"></p>
-      <div style="display:flex;gap:10px;margin-top:12px">
-        <a id="modalWhatsapp" class="btn" href="#" target="_blank">Order via WhatsApp</a>
-        <a href="pemesanan.html" class="btn secondary">Form Pemesanan</a>
+    <!-- Popup Pilihan Order -->
+    <div id="orderChoiceModal" class="modal" onclick="closeOrderChoice()">
+      <div class="dialog" onclick="event.stopPropagation()">
+        <h3>Pilih Cara Order</h3>
+        <div style="display: flex; gap: 10px; margin-top: 12px">
+          <a id="orderWhatsapp" class="btn" target="_blank"
+            >Tanya via WhatsApp</a
+          >
+          <a id="orderForm" class="btn secondary" target="_blank"
+            >Isi Google Form</a
+          >
+        </div>
       </div>
     </div>
-  </div>
-</div>
-  <!-- Popup Pilihan Order -->
-<div id="orderChoiceModal" class="modal" onclick="closeOrderChoice()">
-  <div class="dialog" onclick="event.stopPropagation()">
-    <h3>Pilih Cara Order</h3>
-    <div style="display:flex;gap:10px;margin-top:12px">
-      <a id="orderWhatsapp" class="btn" target="_blank">Tanya via WhatsApp</a>
-      <a id="orderForm" class="btn secondary" target="_blank">Isi Google Form</a>
-    </div>
-  </div>
-</div>
-</body>
+  </body>
 </html>
