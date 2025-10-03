@@ -20,35 +20,99 @@ body {
   min-height: 100vh;
 }
 
-/* Navbar */
 .navbar {
+  position: sticky;
+  top: 0;
+  left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(38, 115, 115, 0.85); /* warna hijau toska 70% opacity */
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 16px rgba(38,115,115,0.3);
+  padding-left: 20px;   /* tambahkan margin kiri */
+  padding-right: 20px;  /* tambahkan margin kanan */
+  transition: top 0.4s;
+}
+
+.navbar-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 18px 36px;
-  background: #267373;
-  color: #fff;
+  max-width: 1140px;
+  margin: auto;
+    padding: 18px 20px;
+
 }
-.navbar .logo {
-  height: 56px;
-  display: block;
+
+.logo { 
+  height: 42px; 
+  margin-right: 13px; 
+  border-radius: 8px; 
 }
+
+.web-name { 
+  font-weight: 700; 
+  color: #cee3e3;  /* warna terang agar kontras di latar hijau */
+  font-size: 1.3rem; 
+  letter-spacing: 2px; 
+  margin-right: 32px; 
+}
+
 .nav-links {
-  display: flex;
-  gap: 18px;
   list-style: none;
-  align-items: center;
+  display: flex;
+  gap: 22px;
+  margin-left: auto;
 }
-.nav-links a {
-  color: #fff;
+
+.nav-links li a {
   text-decoration: none;
+  color: #e6f0f0; /* warna terang agar kontras */
   font-weight: 600;
-  padding: 8px 12px;
-  border-radius: 8px;
+  transition: color 0.2s;
 }
-.nav-links a:hover {
-  background: rgba(255, 255, 255, 0.08);
+
+.nav-links li a:hover {
+  color: #a1d0ce; /* variasi warna hover */
 }
+
+.burger {
+  display: none;
+  font-size: 2rem;
+  color: #cee3e3;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    flex-direction: column;
+    background: rgba(38, 115, 115, 0.85); /* transparan hijau lebih gelap */
+    position: absolute;
+    right: 20px; top: 58px;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    min-width: 145px;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: max-height 0.3s ease;
+  }
+  .nav-toggle:checked + .navbar-content .nav-links {
+    max-height: 330px;
+    padding: 18px 0;
+    display: flex;
+  }
+  .nav-links li {
+    padding: 10px 20px;
+  }
+  .burger {
+    display: block;
+  }
+}
+
 
 /* Hero Section */
 .hero {
@@ -347,7 +411,7 @@ body {
 /* Hero Fullscreen Section */
 .hero-full-bg {
   position: relative;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   overflow: hidden;
   display: flex;

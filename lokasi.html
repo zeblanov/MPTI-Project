@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Forest Dessert - Lokasi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(120deg, #f7f7f7 65%, #d8f2e3 100%);
+      font-family: 'Poppins', sans-serif;
+    }
+    .maps-section {
+      max-width: 740px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 22px;
+      box-shadow: 0 10px 36px 0 rgba(38,115,115,0.13);
+      padding: 36px 26px 32px 26px;
+      text-align: center;
+      border: 2px solid #cef2dd;
+      position: relative;
+      transition: box-shadow 0.3s;
+    }
+    .maps-section:hover {
+      box-shadow: 0 16px 38px 0 rgba(38,115,115,0.18);
+    }
+    .maps-badge {
+      display: inline-flex;
+      align-items: center;
+      gap:10px;
+      font-size: 1.09rem;
+      color: #fff;
+      background: #267373;
+      padding: 8px 20px 8px 18px;
+      border-radius: 16px 22px 22px 10px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 14px #26737333;
+      letter-spacing: 0.5px;
+    }
+    .maps-badge svg {
+      width: 1.4em;
+      height: 1.4em;
+      flex-shrink:0;
+      margin-right:4px
+    }
+    .maps-title {
+      font-size: 2.13rem;
+      font-weight: 900;
+      color: #267373;
+      margin-bottom: 15px;
+      text-shadow: 0 2px 12px #daf2e7, 0 0px 22px #b5ded288;
+      letter-spacing: 1.2px;
+    }
+    .maps-desc {
+      color:#376066;
+      margin-bottom: 18px;
+      font-size: 1.08rem;
+      font-weight: 500;
+    }
+    .maps-address {
+      background: #eaf6f2;
+      color: #257c5f;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 1.06rem;
+      padding: 13px 15px;
+      margin: 0 auto 18px auto;
+      display: inline-block;
+      box-shadow: 0 2px 10px #bef6e366;
+      border-left: 5px solid #f4d35e;
+      text-align: left;
+    }
+    .maps-btn {
+      background: linear-gradient(93deg,#f4d35e 85%, #bee4c5 100%);
+      color: #267373;
+      border: none;
+      padding: 13px 30px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 1.08rem;
+      margin: 16px 0 19px 0;
+      display: inline-block;
+      box-shadow: 0 3px 11px #f4d35e29;
+      transition: background 0.18s, color 0.18s, box-shadow 0.2s;
+    }
+    .maps-btn:hover {
+      background: #f4d35e;
+      color: #174442;
+      box-shadow: 0 5px 18px #bee4c555;
+    }
+    .maps-embed {
+      width: 100%;
+      height: 360px;
+      border: none;
+      border-radius: 13px;
+      box-shadow: 0 2px 13px #b3e7dd33;
+      margin-top: 15px;
+    }
+    @media (max-width:700px) {
+      .maps-section { padding: 13px 3px 15px 3px; }
+      .maps-title { font-size: 1.13rem; }
+      .maps-embed { height: 170px;}
+      .maps-address { font-size: 1.01rem; padding: 10px 8px;}
+    }
+  </style>
+</head>
+<body>
+  <section class="maps-section">
+    <div class="maps-badge">
+      <svg fill="#fff" viewBox="0 0 24 24"><path d="M12 2c-4.418 0-8 3.582-8 8 0 5.25 6.309 11.333 7.228 12.229a2 2 0 0 0 2.544 0C13.691 21.333 20 15.25 20 10c0-4.418-3.582-8-8-8zm0 19.727C10.487 20.239 4 14.5 4 10a8 8 0 1 1 16 0c0 4.5-6.487 10.239-8 11.727z"/><path d="M12 6.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm0 6a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+      Lokasi Forest Dessert
+    </div>
+    <div class="maps-title">Temukan & Kunjungi Outlet Kami</div>
+    <div class="maps-desc">
+      Forest Dessert melayani area Semarang, Mranggen, dan sekitarnya.<br>
+      Tekan tombol di bawah untuk membuka lokasi Google Maps, atau lihat peta dan alamat lengkap di bawah ini.
+    </div>
+    <div class="maps-address">
+      Jl. Kb. Rejo Barat I No.25,<br>
+      Rawa, Kebonbatur, Kec. Mranggen,<br>
+      Kabupaten Demak, Jawa Tengah 59567
+    </div>
+    <a class="maps-btn" href="https://share.google/1uSC7ABeyDrrhzGan" target="_blank">
+      Buka di Google Maps
+    </a>
+    <iframe
+      class="maps-embed"
+      src="https://www.google.com/maps?q=-7.0133881,110.5379926&hl=id&z=16&output=embed"
+      allowfullscreen
+      loading="lazy"></iframe>
+  </section>
+</body>
+</html>
