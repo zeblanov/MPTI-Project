@@ -1,27 +1,31 @@
 <!doctype html>
 <html lang="id">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Produk - Forest Dessert</title>
-<link rel="stylesheet" href="assets/css/style.css">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Produk - Forest Dessert</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <!-- NAVBAR -->
   <nav class="navbar">
-  <input type="checkbox" id="nav-toggle" class="nav-toggle"/>
-  <div class="navbar-content">
-    <img src="assets/img/logo.jpg" alt="Logo" class="logo" />
-    <span class="web-name">FOREST DESSERT</span>
-    <label for="nav-toggle" class="burger">&#9776;</label>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="produk.html">Produk</a></li>
-      <li><a href="edukasi.html">Edukasi Gizi</a></li>
-      <li><a href="pemesanan.html">Pemesanan</a></li>
-      <li><a href="lokasi.html">Lokasi</a></li>
-      <li><a href="kontak.html">Kontak</a></li>
-    </ul>
-  </div>
-</nav>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle"/>
+    <div class="navbar-content">
+      <img src="assets/img/logo.jpg" alt="Logo" class="logo" />
+      <span class="web-name">FOREST DESSERT</span>
+      <label for="nav-toggle" class="burger">&#9776;</label>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="produk.html" class="active">Produk</a></li>
+        <li><a href="edukasi.html">Edukasi Gizi</a></li>
+        <li><a href="pemesanan.html">Pemesanan</a></li>
+        <li><a href="lokasi.html">Lokasi</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
 
+  <!-- MAIN CONTENT -->
   <main>
     <section class="container">
       <h2 class="section-title">Menu Lengkap</h2>
@@ -29,43 +33,56 @@
       <div id="productGrid" class="product-grid"></div>
     </section>
   </main>
-  <footer>&copy; 2025 Forest Dessert — Health Companion</footer>
-<script src="assets/js/script.js"></script>
-<script>
-if(!window.PRODUCTS){
-  window.PRODUCTS = [
-    {id:1,name:'Choco Forest Cake',image:'assets/img/Choco Forest Cake.jpg',short:'Cokelat lembut + topping sehat',desc:'Choco Forest Cake detail panjang.',nutrition:'Protein 5g · Gula 12g · Karbohidrat 30g',price:'Rp35.000',orderLink:'https://wa.me/6285246232785?text=Pesan+Choco+Forest+Cake'},
-    {id:2,name:'Fruit Delight',image:'assets/img/Fruit Delight.jpg',short:'Campuran buah segar dan yoghurt',desc:'Fruit Delight detail panjang.',nutrition:'Protein 3g · Gula 10g',price:'Rp30.000',orderLink:'https://wa.me/6285246232785?text=Pesan+Fruit+Delight'},
-    {id:3,name:'Matcha Pudding',image:'assets/img/Pudding Matcha.jpg',short:'Matcha lembut kaya antioksidan',desc:'Matcha Pudding detail panjang.',nutrition:'Protein 6g · Gula 8g',price:'Rp32.000',orderLink:'https://wa.me/6285246232785?text=Pesan+Matcha+Pudding'}
-  ];
-}
-</script>
 
-<div id="productModal" class="modal" onclick="closeModal()">
-  <div class="dialog" onclick="event.stopPropagation()">
-    <div class="left"><img id="modalImg" src="" alt="product"></div>
-    <div class="right">
-      <h2 id="modalTitle"></h2>
-      <p id="modalDesc" style="color:#5a4a4a"></p>
-      <p><strong>Nutrition:</strong> <span id="modalNutrition"></span></p>
-      <p style="font-size:1.2rem;color:#267373" id="modalPrice"></p>
-      <div style="display:flex;gap:10px;margin-top:12px">
-        <a id="modalWhatsapp" class="btn" href="#" target="_blank">Order via WhatsApp</a>
-        <a href="pemesanan.html" class="btn secondary">Form Pemesanan</a>
+  <footer>
+    &copy; 2025 Forest Dessert — Health Companion
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+
+  <!-- DATA PRODUK -->
+  <script>
+    if (!window.PRODUCTS) {
+      window.PRODUCTS = [
+        // --- 3 PRODUK DARI PRODUK.HTML ASLI ---
+        {id:1,name:'Choco Forest Cake',image:'assets/img/Choco Forest Cake.jpg',short:'Cokelat lembut + topping sehat',desc:'Cake lembut dengan rasa cokelat pekat dan topping buah rendah gula.',nutrition:'Protein 5g · Gula 12g · Karbohidrat 30g',price:'Rp35.000',orderLink:'https://wa.me/6285246232785?text=Pesan+Choco+Forest+Cake'},
+        {id:2,name:'Fruit Delight',image:'assets/img/Fruit Delight.jpg',short:'Campuran buah segar dan yoghurt',desc:'Dessert segar dari potongan buah tropis dan yoghurt rendah lemak.',nutrition:'Protein 3g · Gula 10g',price:'Rp30.000',orderLink:'https://wa.me/6285246232785?text=Pesan+Fruit+Delight'},
+        {id:3,name:'Matcha Pudding',image:'assets/img/Pudding Matcha.jpg',short:'Matcha lembut kaya antioksidan',desc:'Puding hijau matcha dengan rasa lembut dan manfaat antioksidan tinggi.',nutrition:'Protein 6g · Gula 8g',price:'Rp32.000',orderLink:'https://wa.me/6285246232785?text=Pesan+Matcha+Pudding'},
+
+        // --- 3 PRODUK DARI HOME (PRODUK UNGGULAN) ---
+        {id:4,name:'Berry Yogurt Parfait',image:'assets/img/pudingcoklat.png',short:'Lapisan yogurt dan buah berry',desc:'Kombinasi segar antara yoghurt, madu alami, dan buah berry yang kaya serat.',nutrition:'Protein 4g · Gula 9g',price:'Rp33.000',orderLink:'https://wa.me/6285246232785?text=Pesan+Berry+Yogurt+Parfait'},
+        {id:5,name:'Tropical Oat Bowl',image:'assets/img/pudingstrawberry.png',short:'Oat lembut dengan topping buah tropis',desc:'Oatmeal lembut disajikan dengan pisang, kiwi, dan kelapa parut.',nutrition:'Protein 5g · Gula 7g · Serat 6g',price:'Rp29.000',orderLink:'https://wa.me/6285246232785?text=Pesan+Tropical+Oat+Bowl'},
+        {id:6,name:'Avocado Choco Bliss',image:'assets/img/pudingalpukat.png',short:'Avokad dan cokelat — kombinasi creamy sehat',desc:'Smoothie dessert perpaduan alpukat segar dan cokelat rendah gula.',nutrition:'Protein 6g · Gula 10g · Lemak sehat 8g',price:'Rp31.000',orderLink:'https://wa.me/6285246232785?text=Pesan+Avocado+Choco+Bliss'}
+      ];
+    }
+  </script>
+
+  <!-- POPUP DETAIL PRODUK -->
+  <div id="productModal" class="modal" onclick="closeModal()">
+    <div class="dialog" onclick="event.stopPropagation()">
+      <div class="left"><img id="modalImg" src="" alt="product"></div>
+      <div class="right">
+        <h2 id="modalTitle"></h2>
+        <p id="modalDesc" style="color:#5a4a4a"></p>
+        <p><strong>Nutrition:</strong> <span id="modalNutrition"></span></p>
+        <p style="font-size:1.2rem;color:#267373" id="modalPrice"></p>
+        <div style="display:flex;gap:10px;margin-top:12px">
+          <a id="modalWhatsapp" class="btn" href="#" target="_blank">Order via WhatsApp</a>
+          <a href="pemesanan.html" class="btn secondary">Form Pemesanan</a>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<!-- Popup Pilihan Order -->
-<div id="orderChoiceModal" class="modal" onclick="closeOrderChoice()">
-  <div class="dialog" onclick="event.stopPropagation()">
-    <h3>Pilih Cara Order</h3>
-    <div style="display:flex;gap:10px;margin-top:12px">
-      <a id="orderWhatsapp" class="btn" target="_blank">Tanya via WhatsApp</a>
-      <a id="orderForm" class="btn secondary" target="_blank">Isi Google Form</a>
+
+  <!-- POPUP PILIH ORDER -->
+  <div id="orderChoiceModal" class="modal" onclick="closeOrderChoice()">
+    <div class="dialog" onclick="event.stopPropagation()">
+      <h3>Pilih Cara Order</h3>
+      <div style="display:flex;gap:10px;margin-top:12px">
+        <a id="orderWhatsapp" class="btn" target="_blank">Tanya via WhatsApp</a>
+        <a id="orderForm" class="btn secondary" target="_blank">Isi Google Form</a>
+      </div>
     </div>
   </div>
-</div>
-
-
-</body></html>
+</body>
+</html>
