@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Pemesanan - Forest Dessert</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green: #2e6b5b;
+      --yellow: #f7ca4e;
+      --light-bg: #f9fafb;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    header {
+      background-color: var(--green);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 60px;
+    }
+
+    header img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--yellow);
+    }
+
+    body {
+      background-color: var(--light-bg);
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 60px auto;
+      background: var(--white);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      text-align: center;
+      color: var(--green);
+      margin-bottom: 25px;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #333;
+      font-size: 15px;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 18px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 15px;
+      transition: all 0.2s;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--green);
+      outline: none;
+      box-shadow: 0 0 5px rgba(46,107,91,0.3);
+    }
+
+    button {
+      background-color: var(--yellow);
+      color: #333;
+      border: none;
+      padding: 14px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 100%;
+      font-weight: 700;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #ffd65b;
+    }
+
+    .add-btn {
+      background-color: var(--green);
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .add-btn:hover {
+      background-color: #225247;
+    }
+
+    .product-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+    }
+
+    .product-row select, .product-row input {
+      flex: 1;
+    }
+
+    .remove-btn {
+      background-color: crimson;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .remove-btn:hover {
+      background-color: darkred;
+    }
+
+    .back {
+      display: block;
+      text-align: center;
+      margin-top: 25px;
+      color: var(--green);
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .back:hover {
+      color: #1f4a3d;
+    }
+
+    footer {
+      background-color: var(--green);
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 14px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo Forest Dessert">
+      FOREST DESSERT
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="produk.html">Produk</a>
+      <a href="edukasi.html">Edukasi Gizi</a>
+      <a href="pemesanan.html">Pemesanan</a>
+      <a href="lokasi.html">Lokasi</a>
+      <a href="kontak.html">Kontak</a>
+    </nav>
+  </header>
+
+  <!-- Form -->
+  <div class="container">
+    <h2>Form Pemesanan</h2>
+    <form id="orderForm">
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" id="nama" name="nama" placeholder="Masukkan nama kamu" required>
+
+      <label for="wa">Nomor WhatsApp</label>
+      <input type="tel" id="wa" name="wa" placeholder="08xxxxxxxxxx" required>
+
+      <label for="alamat">Alamat Pengiriman</label>
+      <textarea id="alamat" name="alamat" rows="3" placeholder="Masukkan alamat lengkap" required></textarea>
+
+      <h3 style="color:var(--green);margin-top:20px;margin-bottom:10px;">Pilih Produk</h3>
+
+      <div id="productList">
+        <div class="product-row">
+          <select name="produk" required>
+            <option value="">-- Pilih Produk --</option>
+            <option value="Choco Forest Cake">Choco Forest Cake</option>
+            <option value="Fruit Delight">Fruit Delight</option>
+            <option value="Matcha Pudding">Matcha Pudding</option>
+            <option value="Berry Yogurt Parfait">Berry Yogurt Parfait</option>
+            <option value="Tropical Oat Bowl">Tropical Oat Bowl</option>
+            <option value="Avocado Choco Bliss">Avocado Choco Bliss</option>
+          </select>
+          <input type="number" name="jumlah" placeholder="Jumlah" min="1" required>
+        </div>
+      </div>
+
+      <button type="button" class="add-btn" id="addProduct">+ Tambah Produk</button>
+
+      <label for="catatan">Catatan Tambahan</label>
+      <textarea id="catatan" name="catatan" rows="2" placeholder="Opsional"></textarea>
+
+      <button type="submit">Kirim Pesanan via WhatsApp</button>
+    </form>
+
+    <a href="pemesanan.html" class="back">← Kembali ke Halaman Pemesanan</a>
+  </div>
+
+  <footer>
+    &copy; 2025 Forest Dessert. All rights reserved.
+  </footer>
+
+  <script>
+    const adminNumber = "6285246232785"; // nomor admin kamu
+
+    document.getElementById("addProduct").addEventListener("click", function() {
+      const container = document.getElementById("productList");
+      const row = document.createElement("div");
+      row.classList.add("product-row");
+      row.innerHTML = `
+        <select name="produk" required>
+          <option value="">-- Pilih Produk --</option>
+          <option value="Choco Forest Cake">Choco Forest Cake</option>
+          <option value="Fruit Delight">Fruit Delight</option>
+          <option value="Matcha Pudding">Matcha Pudding</option>
+          <option value="Berry Yogurt Parfait">Berry Yogurt Parfait</option>
+          <option value="Tropical Oat Bowl">Tropical Oat Bowl</option>
+          <option value="Avocado Choco Bliss">Avocado Choco Bliss</option>
+        </select>
+        <input type="number" name="jumlah" placeholder="Jumlah" min="1" required>
+        <button type="button" class="remove-btn">×</button>
+      `;
+      container.appendChild(row);
+
+      row.querySelector(".remove-btn").addEventListener("click", function() {
+        row.remove();
+      });
+    });
+
+    document.getElementById("orderForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const nama = document.getElementById("nama").value;
+      const wa = document.getElementById("wa").value;
+      const alamat = document.getElementById("alamat").value;
+      const catatan = document.getElementById("catatan").value;
+
+      let produkList = "";
+      document.querySelectorAll("#productList .product-row").forEach((row, index) => {
+        const produk = row.querySelector("select").value;
+        const jumlah = row.querySelector("input").value;
+        produkList += `${index + 1}. ${produk} (${jumlah} pcs)%0A`;
+      });
+
+      const pesan = `Halo Forest Dessert 🍰%0ASaya ingin memesan:%0A%0A🧍 Nama: ${nama}%0A📱 No. WA: ${wa}%0A🏠 Alamat: ${alamat}%0A🍮 Pesanan:%0A${produkList}%0A📝 Catatan: ${catatan || '-'}%0A%0AMohon konfirmasi ketersediaan ya!`;
+      
+      const url = `https://wa.me/${adminNumber}?text=${pesan}`;
+      window.open(url, "_blank");
+    });
+  </script>
+
+</body>
+</html>
