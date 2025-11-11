@@ -25,7 +25,6 @@ function openProduct(id){
   document.getElementById('modalDesc').innerText = data.desc;
   document.getElementById('modalNutrition').innerText = data.nutrition;
   document.getElementById('modalPrice').innerText = data.price;
-  document.getElementById('modalWhatsapp').href = 'https://wa.me/6285246232785?text=Halo%20ForestDessert%2C%20saya%20mau%20pesan%20'+encodeURIComponent(data.name);
   modal.style.display = 'flex';
 }
 function closeModal(){ document.getElementById('productModal').style.display='none'; }

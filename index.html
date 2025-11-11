@@ -246,7 +246,7 @@
             <p>${p.short}</p>
             <p class="price">${p.price}</p>
             <div class="btn-group">
-              <button class="btn detail-btn" data-id="${p.id}">Detail</button>
+              <button class="btn detail-btn" data-id="${p.id}" data-bs-toggle="modal" data-bs-target="#productModal" >Detail</button>
               <a href="${p.orderLink}" class="btn secondary">Order</a>
             </div>
           `;
@@ -263,12 +263,13 @@
       }
 
       function openModal(p) {
+        console.log("open modal");
+        document.getElementById("productModal").style.display = "flex";
         document.getElementById("modalImg").src = p.image;
         document.getElementById("modalTitle").innerText = p.name;
         document.getElementById("modalDesc").innerText = p.desc;
         document.getElementById("modalNutrition").innerText = p.nutrition;
         document.getElementById("modalPrice").innerText = p.price;
-        document.getElementById("productModal").style.display = "flex";
       }
 
       function closeModal() {
